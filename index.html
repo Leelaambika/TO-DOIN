@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Enhanced To-Do List with Calendar</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Dark Mode Toggle -->
+  <button id="theme-toggle">Toggle Dark Mode</button>
+
+  <div class="container">
+    <h1>My To-Do List</h1>
+
+    <!-- Task Form -->
+    <form id="taskForm">
+      <input type="text" id="taskInput" placeholder="Add new task..." autocomplete="off" />
+      <button type="submit">Add</button>
+    </form>
+
+    <!-- Filters -->
+    <div class="filters">
+      <button id="filterAll" class="filter-btn active">All</button>
+      <button id="filterActive" class="filter-btn">Active</button>
+      <button id="filterCompleted" class="filter-btn">Completed</button>
+      <input type="text" id="searchInput" placeholder="Search tasks..." />
+    </div>
+
+    <!-- Task List -->
+    <ul id="taskList" class="task-list">
+      <!-- Tasks will be dynamically added here -->
+    </ul>
+
+    <!-- Extra Writing Space -->
+    <div class="extra-notes">
+      <h2>Extra Notes</h2>
+      <textarea id="extraNotes" placeholder="Write your notes here..."></textarea>
+    </div>
+
+    <!-- Calendar Section -->
+    <div class="calendar">
+      <div class="month">
+        <ul>
+          <li class="prev">&#10094;</li>
+          <li class="next">&#10095;</li>
+          <li>August<br><span style="font-size:18px">2025</span></li>
+        </ul>
+      </div>
+
+      <ul class="weekdays">
+        <li>M</li>
+        <li>T</li>
+        <li>W</li>
+        <li>T</li>
+        <li>F</li>
+        <li>S</li>
+        <li>S</li>
+      </ul>
+
+      <ul class="days">
+        <li data-date="2025-08-01">1</li>
+        <li data-date="2025-08-02">2</li>
+        <li data-date="2025-08-03">3</li>
+       
+      </ul>
+    </div>
+
+    <!-- Sticky Notes Section -->
+    <div class="sticky-notes">
+      <div class="sticky-note" data-date="2025-08-01">
+        <div class="note-header">August 1</div>
+        <div class="note-content">Meeting with team at 10 AM.</div>
+      </div>
+      <!-- Additional sticky notes for other dates -->
+    </div>
+
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
